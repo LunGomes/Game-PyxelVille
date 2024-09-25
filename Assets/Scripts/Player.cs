@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed = 8f;
+    [SerializeField] private float height = 10f;
     private float horizontal;
     private Rigidbody2D rb;
     private bool isFacingRight = false;
@@ -28,7 +29,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            this.rb.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
+            this.rb.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+            animator.SetTrigger("Pular");
         }
 
         Flip();

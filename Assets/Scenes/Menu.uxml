@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Imagens/Menu.png?fileID=2800000&amp;guid=b1f614f2d7b870c4cbca5df712686b45&amp;type=3#Menu&quot;); width: 734px; height: 485px;">
+        <ui:Button text="&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btnStart" style="background-image: url(&quot;project://database/Assets/Imagens/Bot%C3%A3o%20Start.png?fileID=2800000&amp;guid=a81da32bcc9d2c4479ae0a2a1677fa8d&amp;type=3#Botão Start&quot;); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; height: 46px; width: 185px; justify-content: flex-end; align-self: center; align-items: auto; margin-top: 200px; color: rgba(186, 255, 255, 0); background-color: rgba(162, 162, 162, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+        <ui:Button text="&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="btnCredito" style="background-image: url(&quot;project://database/Assets/Imagens/Bot%C3%A3o%20Credits.png?fileID=2800000&amp;guid=22073d773fb50bc4b8572ac08c947c87&amp;type=3#Botão Credits&quot;); background-color: rgba(255, 255, 255, 0); border-left-color: rgba(196, 196, 196, 0); border-right-color: rgba(196, 196, 196, 0); border-top-color: rgba(196, 196, 196, 0); border-bottom-color: rgba(196, 196, 196, 0); height: 46px; width: 185px; align-self: center; margin-top: 25px;" />
+    </ui:VisualElement>
+</ui:UXML>

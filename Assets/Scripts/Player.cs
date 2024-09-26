@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private bool isFacingRight = false;
     private Animator animator;
 
+
     private void Awake()
     {
         this.rb = this.GetComponent<Rigidbody2D>();
@@ -28,7 +29,7 @@ public class Player : MonoBehaviour
         animator.SetFloat("speed", Mathf.Abs(horizontal));
 
         if (Input.GetKeyDown(KeyCode.Space))
-        {
+            {
             this.rb.AddForce(Vector2.up * height, ForceMode2D.Impulse);
             animator.SetTrigger("Pular");
         }
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
         }*/
     }
 
+    
     private void Flip()
     {
         if (isFacingRight && horizontal < 0 || !isFacingRight && horizontal > 0f)
@@ -55,4 +57,6 @@ public class Player : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+     
+
 }

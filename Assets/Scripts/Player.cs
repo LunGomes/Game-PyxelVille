@@ -6,12 +6,13 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float speed = 8f;
     [SerializeField] private float height = 10f;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Transform groundCheck;
+    //[SerializeField] private LayerMask groundLayer;
+    //[SerializeField] private Transform groundCheck;
     private float horizontal;
     private Rigidbody2D rb;
     private bool isFacingRight = false;
     private Animator animator;
+    //private bool isGrounded;
 
 
     private void Awake()
@@ -24,15 +25,17 @@ public class Player : MonoBehaviour
     void Update()
     {
 
+        //isGrounded = IsGrounded();
         horizontal = Input.GetAxis("Horizontal");
         Debug.Log(horizontal);
 
         this.rb.velocity = new Vector2(horizontal * speed, this.rb.velocity.y);
         animator.SetFloat("speed", Mathf.Abs(horizontal));
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
          {
             this.rb.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+ 
             animator.SetTrigger("Pular");
         }
 
@@ -59,11 +62,11 @@ public class Player : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-    private bool IsGrounded()
+    /*private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
    
-    }
+    }*/
 
 
 }

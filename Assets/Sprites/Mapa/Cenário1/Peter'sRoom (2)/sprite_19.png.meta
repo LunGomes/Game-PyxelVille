@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6f4904b05776c1b4f988aa5959f645ba
+guid: 700490153d44e0b44a49437ab375d7b3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,22 +136,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: onda_0
+      name: virtudes
       rect:
         serializedVersion: 2
-        x: 1583
-        y: 1771
-        width: 1616
-        height: 779
+        x: 162
+        y: 101
+        width: 108
+        height: 105
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20c423d9fdfff7a44b5784e5890d7551
-      internalID: 99055273
+      spriteID: 726f9ced7fe373e41b6ea8f74d11a442
+      internalID: 479259293
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      onda_0: 99055273
+      virtudes: 479259293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

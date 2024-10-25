@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f67e48e86951b9d49960afeb28b6232d
+guid: 14eaa932775199d49929145c0be39d8d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tv2_0
+      name: sprite_19_0
       rect:
         serializedVersion: 2
-        x: 265
-        y: 217
-        width: 271
-        height: 131
+        x: 1570
+        y: 1758
+        width: 1650
+        height: 802
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8194de359475661418ea645c12a24a27
-      internalID: -941487187
+      spriteID: 6ab5efa2df4a28945a0ddd01eaf6fdf9
+      internalID: 869528964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: televisao_0
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 221
+        width: 268
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9aa84aee552c6499216837893a3c2f
+      internalID: -1851736614
       vertices: []
       indices: 
       edges: []
@@ -167,7 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tv2_0: -941487187
+      sprite_19_0: 869528964
+      televisao_0: -1851736614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

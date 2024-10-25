@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f67e48e86951b9d49960afeb28b6232d
+guid: 6f4904b05776c1b4f988aa5959f645ba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tv2_0
+      name: onda_0
       rect:
         serializedVersion: 2
-        x: 265
-        y: 217
-        width: 271
-        height: 131
+        x: 1583
+        y: 1771
+        width: 1616
+        height: 779
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8194de359475661418ea645c12a24a27
-      internalID: -941487187
+      spriteID: 20c423d9fdfff7a44b5784e5890d7551
+      internalID: 99055273
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tv2_0: -941487187
+      onda_0: 99055273
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f67e48e86951b9d49960afeb28b6232d
+guid: 61a49306073319047a90f1da407726af
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tv2_0
+      name: alerta
       rect:
         serializedVersion: 2
-        x: 265
-        y: 217
-        width: 271
-        height: 131
+        x: 1584
+        y: 1773
+        width: 1616
+        height: 773
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8194de359475661418ea645c12a24a27
-      internalID: -941487187
+      spriteID: 3e376a21c805ef04980d0973b6bb5edc
+      internalID: 1697339429
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tv2_0: -941487187
+      alerta: 1697339429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

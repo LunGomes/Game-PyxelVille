@@ -2,71 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
-    [SerializeField] private float speed = 8f;
-    [SerializeField] private float height = 10f;
-    //[SerializeField] private LayerMask groundLayer;
-    //[SerializeField] private Transform groundCheck;
-    private float horizontal;
-    private Rigidbody2D rb;
-    private bool isFacingRight = false;
-    private Animator animator;
-    //private bool isGrounded;
+public class Player : MonoBehaviour {
 
+	public CharacterController2D controller;
 
-    private void Awake()
-    {
-        this.rb = this.GetComponent<Rigidbody2D>();
-        this.animator = this.GetComponent<Animator>();
-    }
+	public float runSpeed = 40f;
 
-    // Update is called once per frame
-    void Update()
-    {
+	float horizontalMove = 0f;
+	bool jump = false;
+	bool crouch = false;
+	
+	// Update is called once per frame
+	void Update () {
 
-        //isGrounded = IsGrounded();
-        horizontal = Input.GetAxis("Horizontal");
-        Debug.Log(horizontal);
+		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        this.rb.velocity = new Vector2(horizontal * speed, this.rb.velocity.y);
-        animator.SetFloat("speed", Mathf.Abs(horizontal));
+		if (Input.GetButtonDown("Jump"))
+		{
+			jump = true;
+		}
 
-        if (Input.GetKeyDown(KeyCode.Space))
-         {
-            this.rb.AddForce(Vector2.up * height, ForceMode2D.Impulse);
- 
-            animator.SetTrigger("Pular");
-        }
+		if (Input.GetButtonDown("Crouch"))
+		{
+			crouch = true;
+		} else if (Input.GetButtonUp("Crouch"))
+		{
+			crouch = false;
+		}
 
-        Flip();
+	}
 
-        /*if (Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log("Apertou espaço");
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log("Clicou com o botão direito");
-        }*/
-    }
-
-    
-    private void Flip()
-    {
-        if (isFacingRight && horizontal < 0 || !isFacingRight && horizontal > 0f)
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
-    }
-    /*private bool IsGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-   
-    }*/
-
-
+	void FixedUpdate ()
+	{
+		// Move our character
+		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+		jump = false;
+	}
 }

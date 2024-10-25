@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,7 +218,7 @@ GameObject:
   - component: {fileID: 7714140}
   - component: {fileID: 7714139}
   - component: {fileID: 7714141}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273593136}
   - component: {fileID: 273593135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1309,7 +1308,7 @@ GameObject:
   - component: {fileID: 339764776}
   - component: {fileID: 339764778}
   - component: {fileID: 339764777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2479,10 +2478,12 @@ GameObject:
   - component: {fileID: 457731750}
   - component: {fileID: 457731749}
   - component: {fileID: 457731748}
+  - component: {fileID: 457731755}
   - component: {fileID: 457731747}
   - component: {fileID: 457731753}
   - component: {fileID: 457731754}
-  m_Layer: 0
+  - component: {fileID: 457731756}
+  m_Layer: 3
   m_Name: Araujo0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2501,8 +2502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa0f4a69bae2cd45a493e8ef3945497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  height: 10
+  controller: {fileID: 457731755}
+  runSpeed: 40
 --- !u!61 &457731748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2608,7 +2609,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &457731751
 SpriteRenderer:
@@ -2674,7 +2675,9 @@ Transform:
   m_LocalPosition: {x: -1.789978, y: -1.039978, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 653370110}
+  - {fileID: 2119062222}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &457731753
@@ -2717,6 +2720,46 @@ MonoBehaviour:
   - {fileID: 734746226}
   fullHeart: {fileID: 134470716, guid: 7307416a4bb1bc244b6d0ee4977056b0, type: 3}
   emptyHeart: {fileID: 842530343, guid: f14a70b43d1ddff4183fec7407b16a4d, type: 3}
+--- !u!114 &457731755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457731746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ef8f4c8908dcd4cbb7333546303ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 700
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 119
+  m_GroundCheck: {fileID: 2119062222}
+  m_CeilingCheck: {fileID: 653370110}
+  m_CrouchDisableCollider: {fileID: 457731748}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &457731756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457731746}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62568970b696f4b4a8f4b015f2c1268c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515789750
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,7 +3443,7 @@ GameObject:
   - component: {fileID: 624766991}
   - component: {fileID: 624766993}
   - component: {fileID: 624766992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3863,6 +3906,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &653370109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653370110}
+  m_Layer: 3
+  m_Name: CeilingCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &653370110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653370109}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 457731752}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &662312436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +5109,7 @@ GameObject:
   - component: {fileID: 1023640376}
   - component: {fileID: 1023640375}
   - component: {fileID: 1023640374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29402,7 +29476,7 @@ GameObject:
   - component: {fileID: 1911709763}
   - component: {fileID: 1911709765}
   - component: {fileID: 1911709764}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30271,6 +30345,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2119062221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119062222}
+  m_Layer: 3
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119062222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119062221}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: -0.84, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 457731752}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

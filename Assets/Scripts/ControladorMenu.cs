@@ -17,6 +17,6 @@ public class ControladorMenu : MonoBehaviour
 
     void onPlay(ClickEvent evt)
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Introducao");
     }
 }

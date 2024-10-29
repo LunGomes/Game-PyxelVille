@@ -2505,6 +2505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 457731755}
   runSpeed: 40
+  animator: {fileID: 457731753}
 --- !u!61 &457731748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2745,7 +2746,19 @@ MonoBehaviour:
   m_CrouchDisableCollider: {fileID: 457731748}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 457731747}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []

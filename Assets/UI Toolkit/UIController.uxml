@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgb(31, 76, 154); width: 100px; height: 60px; margin-top: 12px; margin-right: 0; margin-bottom: 0; margin-left: 12px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; -unity-background-scale-mode: stretch-to-fill; flex-direction: column; flex-shrink: 0; flex-wrap: wrap;">
+        <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Sprites/Sprites_Player/sprite_1.png?fileID=21300000&amp;guid=f4533c30bbdb5464b9dc8e6b4a8f63b7&amp;type=3#sprite_1&quot;); margin-top: 10px; margin-right: 12px; margin-bottom: 12px; margin-left: 12px; width: 40px; height: 40px; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-background-scale-mode: scale-to-fit; -unity-slice-scale: 0; flex-shrink: 0; flex-direction: column-reverse;" />
+        <ui:Label tabindex="-1" text="5" parse-escape-sequences="true" display-tooltip-when-elided="true" name="pontos" style="color: rgb(255, 255, 255); -unity-font: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/super-pixel-font/SuperPixel-m2L8j.ttf?fileID=12800000&amp;guid=d32b7e97e9ee6424ba855952395e4709&amp;type=3#SuperPixel-m2L8j&quot;); -unity-font-definition: initial; margin-top: 20px;" />
+    </ui:VisualElement>
+</ui:UXML>

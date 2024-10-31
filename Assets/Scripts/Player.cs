@@ -12,6 +12,9 @@ public class Player : MonoBehaviour {
 	bool jump = false;
 	bool crouch = false;
 	public Animator animator;
+
+	public CoinManager cm;
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -47,4 +50,12 @@ public class Player : MonoBehaviour {
 		jump = false;
 	}
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+		if (other.gameObject.CompareTag("Coin"))
+		{
+			Destroy(other.gameObject);
+			cm.coinCount++;
+		}
+    }
 }

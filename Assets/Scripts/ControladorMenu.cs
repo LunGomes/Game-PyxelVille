@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
 
 public class ControladorMenu : MonoBehaviour
 {

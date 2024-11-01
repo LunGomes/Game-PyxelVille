@@ -12,7 +12,6 @@ public class Player : MonoBehaviour {
 	bool jump = false;
 	bool crouch = false;
 	public Animator animator;
-    public GameOver game;
 
 
     // Update is called once per frame
@@ -48,8 +47,5 @@ public class Player : MonoBehaviour {
 		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
 		jump = false;
 	}
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        game.GameOverActive();
-    }
+  
 }

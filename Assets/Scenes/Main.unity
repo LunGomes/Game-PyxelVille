@@ -1940,6 +1940,7 @@ GameObject:
   - component: {fileID: 457731753}
   - component: {fileID: 457731754}
   - component: {fileID: 457731756}
+  - component: {fileID: 457731757}
   m_Layer: 3
   m_Name: Araujo0
   m_TagString: Player
@@ -1962,6 +1963,7 @@ MonoBehaviour:
   controller: {fileID: 457731755}
   runSpeed: 40
   animator: {fileID: 457731753}
+  game: {fileID: 0}
 --- !u!61 &457731748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2230,6 +2232,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62568970b696f4b4a8f4b015f2c1268c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &457731757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457731746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86acc951f061563469fd6634c41e18b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 1052400064}
 --- !u!1 &521988728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3914,7 +3929,7 @@ Transform:
   m_GameObject: {fileID: 993099711}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 127.2, y: 18.4, z: 0}
+  m_LocalPosition: {x: 118.95, y: 1.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4244,27 +4259,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1052400067}
   - component: {fileID: 1052400066}
-  - component: {fileID: 1052400065}
   m_Layer: 0
   m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1052400065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052400064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86acc951f061563469fd6634c41e18b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOver: {fileID: 0}
+  m_IsActive: 0
 --- !u!61 &1052400066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6500,7 +6501,7 @@ Transform:
   m_GameObject: {fileID: 1867428168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.2271, y: -4.88, z: 0}
+  m_LocalPosition: {x: 105.52, y: -6.86, z: 0}
   m_LocalScale: {x: 0.36269423, y: 0.4248, z: 0.4248}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6819,6 +6820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145448652}
   - component: {fileID: 2145448651}
+  - component: {fileID: 2145448653}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6853,6 +6855,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2145448653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145448650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86acc951f061563469fd6634c41e18b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 1052400064}
 --- !u!1001 &344730586560274402
 PrefabInstance:
   m_ObjectHideFlags: 0

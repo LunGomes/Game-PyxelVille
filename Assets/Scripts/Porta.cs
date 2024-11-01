@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class Porta : MonoBehaviour
 {
 
+    [SerializeField]
+    private string nomeProximaFase;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IrFinalizacao();
@@ -14,6 +17,6 @@ public class Porta : MonoBehaviour
 
     private void IrFinalizacao()
     {
-        SceneManager.LoadScene("Finalizacao");
+        SceneManager.LoadScene(this.nomeProximaFase);
     }
 }

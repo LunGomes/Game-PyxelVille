@@ -295,6 +295,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timeline
       objectReference: {fileID: 0}
+    - target: {fileID: 5798709368934826785, guid: 8550a786e9c42b24a9d7e43665929062, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039298791908265026, guid: 8550a786e9c42b24a9d7e43665929062, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     - target: {fileID: 6494924291624528217, guid: 8550a786e9c42b24a9d7e43665929062, type: 3}
       propertyPath: m_LocalPosition.x
       value: 274.33417

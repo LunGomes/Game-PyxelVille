@@ -1109,24 +1109,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &183178955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3438344829908567732, guid: a533c185846c32a43895d76864e67a3d, type: 3}
-  m_PrefabInstance: {fileID: 5847309442149451190}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &183178957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183178955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55138fe6ba6c23846a37800be3ecc211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptDaUI: {fileID: 0}
 --- !u!1 &244134739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,7 +1962,6 @@ MonoBehaviour:
   controller: {fileID: 457731755}
   runSpeed: 40
   animator: {fileID: 457731753}
-  cm: {fileID: 2145448651}
 --- !u!61 &457731748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2033,7 +2014,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457731746}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2185,7 +2166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457731746}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3079d4dd86232854781527d096cd1af4, type: 3}
   m_Name: 
@@ -6682,7 +6663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d5515375563b449b6d63f361e0a663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCount: 0
 --- !u!4 &2145448652
 Transform:
   m_ObjectHideFlags: 0
@@ -6706,6 +6686,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1127633174344001182, guid: 0a29243b6ad3794418bddda4da9585e8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4744291373012300720, guid: 0a29243b6ad3794418bddda4da9585e8, type: 3}
       propertyPath: m_Name
       value: mauri
@@ -6754,8 +6738,7 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2838887380147438046, guid: 0a29243b6ad3794418bddda4da9585e8, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6812,13 +6795,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: virtudes
       objectReference: {fileID: 0}
+    - target: {fileID: 8784478633865226787, guid: a533c185846c32a43895d76864e67a3d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3438344829908567732, guid: a533c185846c32a43895d76864e67a3d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 183178957}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a533c185846c32a43895d76864e67a3d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

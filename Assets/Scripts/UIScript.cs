@@ -12,22 +12,15 @@ public class UIScript : MonoBehaviour
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
         textoPontuacao = root.Q<Label>("pontos");
+        Debug.Log("Start method called. Initial Label text: " + textoPontuacao.text);
     }
 
-    public void adicionarPonto()
+    public void AdicionarPonto()
     {
-        coinCount++;
-        this.textoPontuacao.text = coinCount.ToString();
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Coin"))
-        {
-            Debug.Log(textoPontuacao.text);
-            adicionarPonto();
-            Destroy(other.gameObject);
-
-        }
+            Debug.Log("AdicionarPonto method called. Current coinCount: " + coinCount);
+            coinCount++;
+            textoPontuacao.text = coinCount.ToString();
+            Debug.Log("Label text updated to: " + textoPontuacao.text);
     }
 
 

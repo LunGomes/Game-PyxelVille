@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
-    public int coinCount;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+     private UIScript pontuacao;
 
-    // Update is called once per frame
-    void Update()
+     private void Start(){
+		pontuacao = GameObject.FindObjectOfType<UIScript>();
+	}
+
+     private void OnTriggerEnter2D(Collider2D other)
     {
-        
+		if (other.gameObject.CompareTag("Player"))
+		{
+			
+			Destroy(gameObject);
+			pontuacao.AdicionarPonto();
+		}
     }
 }
